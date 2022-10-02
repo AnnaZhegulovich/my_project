@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <title>{% block title %} {% endblock %}</title>
+{% extends "layout.html" %}
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+
+</head>
+<body>
+{% block content %}
+<div class="container">
+
+    <script src="{{url_for('static', filename='js/general.js')}}"></script>
+    <div class="slideTooltip-container revealator-slideup revealator-delay18 revealator-duration5 revealator-once">
+        <div class="slideTooltip-button" onclick="showHideTooltip()">
+            <button id="slideTooltip-button-text" class="submit-button bouncing-button" data-show="0"> Показать подсказку →</button>
+        </div>
+        <div class="slideTooltip-data" style="display: none;">
+            <script src="{{url_for('static', filename='js/ajax_get_page.js')}}" page="{{url_for('tables')}}" block=".slideTooltip-data">
+            </script>
+        </div>
+    </div>
+    <div class="form-container">
+     <form action="result" method="post" class="revealator-slideright revealator-duration5 revealator-delay3">
+    {{ form.hidden_tag }}
+  <h3 class="revealator-slideleft revealator-duration8 revealator-delay5"> Введите данные </h3>
+<div class="input-container revealator-slideright revealator-duration5 revealator-delay7">
+  {{ form.pressure_sist(size=32) }} {{ form.pressure_sist.label }}
+</div>
+<div class="input-container revealator-slideleft revealator-duration5 revealator-delay9">
+{{ form.pressure_dia(size=32) }} {{ form.pressure_dia.label }}
+</div>
+  <div class="input-container revealator-slideright revealator-duration5 revealator-delay11">
+{{ form.breath(size=32) }} {{ form.breath.label }}
+</div>
+  <div class="input-container revealator-slideleft revealator-duration5 revealator-delay13">
+{{ form.pulse(size=32) }}{{ form.pulse.label }}
+</div>
+
+   <div class="input-container revealator-slideright revealator-duration5 revealator-delay15" >
+{{ form.iss(size=32) }} {{ form.iss.label }}
+</div>
+
+<div class="input-container revealator-slideleft revealator-duration5 revealator-delay17">
+    {{ form.gsg(size=32) }} {{ form.gsg.label }}
+</div>
+
+
+<div class="input submit revealator-zoomout revealator-duration5 revealator-delay19">
+                <div class=""><input class="submit-button" type="submit" value="Отправить данные"></div>
+</div>
+</form></div>
+</div>
+{% endblock %}
+</body>
+</html>

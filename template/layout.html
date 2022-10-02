@@ -1,0 +1,26 @@
+<!doctype html>
+  <head>
+<link type="text/css" href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fm.revealator.jquery.css')}}">
+    <script src="{{url_for('static', filename='js/jquery-1.11.3.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/fm.revealator.jquery.js')}}"></script>
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="navbar-collapse revealator-slideup revealator-duration5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active revealator-slideleft revealator-delay3"><a class="navbar-brand" href="{{ url_for('index')}}">Главная</a></li>
+                <li class="nav-item active revealator-slideleft revealator-delay5"><a class="navbar-brand" href="{{ url_for('sh')}}">Шкалы</a></li>
+                <li class="nav-item active revealator-slideleft revealator-delay7"><a class="navbar-brand" href="{{ url_for('about')}}">О проекте</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    {% extends "footer.html" %}
+  </body>
+</html>

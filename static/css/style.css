@@ -1,0 +1,347 @@
+.navbar{
+
+}
+.navbar-collapse{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    background-color: #EECFBA;
+    border-color: #E7E700;
+    margin: 0px;
+  list-style-type: none;
+    font-size: 30px;
+    white-space: nowrap;
+    /*background: linear-gradient(45deg, #FAECD5, #C5DDE8);*/
+    background-color: #262626;
+    opacity: 0.9;
+    font-family: sans-serif;
+    width: 60%;
+    border-radius: 0 0 40px 40px;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+ .navbar-brand {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+     display: flex;
+
+}
+
+input[type="submit"],
+button
+{
+    cursor: pointer;
+}
+
+li {
+
+}
+
+a {
+text-decoration: none;
+ display: block;
+ transition: all 0.3s linear;
+}
+a:hover{
+    color: #4682B4;
+}
+
+form  { display: table;
+      background: linear-gradient(45deg, #FAECD5, #C5DDE8);
+      border-radius: 10px;
+      color: #000000;
+      margin: 0 auto;
+      margin-top:50px;
+      font-family: sans-serif;
+      font-stretch: ultra-condensed;
+      line-height: 20px;
+      border: 10px;
+      padding: 30px;
+      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+   }
+
+.button {
+     text-align: center;
+     cursor: pointer;
+}
+
+label { display: table-cell;
+        clear:both; text-align:left; line-height:25px;}
+
+input {
+/*display: table-cell;
+      position: relative;
+       left: 50%;
+      transform: translate(-50%, 0);
+      height: 20px;
+
+      border-radius:10px;*/
+ }
+
+
+
+body {
+ margin: 0;
+ background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);
+ display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+table{
+/*
+font-family: sans-serif;
+margin-top:100px;
+margin-left:50px;
+table align=right;
+float:left;
+margin: 20px 50px 50px 10px;*/
+}
+
+
+h3{
+font-family: sans-serif;
+}
+
+.submit-button{
+    border:none;
+  text-decoration: none;
+  height: 45px;
+  border-radius: 45px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+
+.submit-button:hover{
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: scale(1.1);
+}
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:black;
+    pointer-event:none;
+	transition: all 0.3s ease-in-out;
+}
+.input-container input{
+  border:0;
+  border-bottom:1px solid #555;
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:black;
+  transition: transform 0.3s linear;
+}
+.input-container input:focus{
+ border:none;
+ outline:none;
+ border-bottom:1px solid #e74c3c;
+}
+
+.input-container input:focus,
+.input-container input:hover{
+    transform: scale(1.07);
+    border-bottom: 1px solid green;
+    background: transparent;
+}
+
+.input-container input:focus ~ label,
+.input-container input:hover ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+    color: green;
+}
+
+.container{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.slideTooltip-container{
+    max-width: 50%;
+    padding-left: 40px;
+}
+.slideTooltip-button{
+    text-align: center;
+    cursor: pointer;
+
+}
+.slideTooltip-data{
+
+}
+.tables-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+.table_blur {
+  background: #f5ffff;
+  border-collapse: collapse;
+  text-align: left;
+}
+.table_blur th {
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+  background: linear-gradient(#9595b6, #5a567f);
+  color: white;
+  padding: 10px 15px;
+  position: relative;
+}
+.table_blur th:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+}
+.table_blur tr:nth-child(odd) {
+  background: #ebf3f9;
+}
+.table_blur th:first-child {
+  border-left: 1px solid #777777;
+  border-bottom:  1px solid #777777;
+  box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur th:last-child {
+  border-right: 1px solid #777777;
+  border-bottom:  1px solid #777777;
+  box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+}
+.table_blur td {
+  border: 1px solid #e3eef7;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.table_blur tbody:hover td {
+  color: transparent;
+  text-shadow: 0 0 3px #a09f9d;
+}
+.table_blur tbody:hover tr:hover td {
+  color: #444444;
+  text-shadow: none;
+}
+.wrapper{
+    vertical-align: middle;
+    flex-grow: 1;
+    margin-top: 50px;
+
+}
+
+footer {
+flex-shrink: 0;
+  align-items: center;
+  background-color: #262626;
+  bottom: 0;
+  margin-top: 50px;
+  color: #666666;
+  display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.9 !important;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.footer-block{
+    display: flex;
+    color: white;
+}
+
+.bouncing-button{
+    animation: bouncing 3s infinite linear;
+}
+
+@keyframes bouncing{
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateY(10px);
+    }
+    20%{
+        transform: translateY(5px);
+    }
+    30%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(20px);
+    }
+    80%{
+        transform: translateY(10px);
+    }
+    90%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.shaking-button{
+    animation: shaking 5s infinite linear;
+}
+
+@keyframes shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(5px) }
+ 50% { transform: translateX(-5px) }
+ 75% { transform: translateX(5px) }
+ 100% { transform: translateX(0) }
+}
